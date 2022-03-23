@@ -1,0 +1,90 @@
+{
+  "stats": {
+    "suites": 0,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2022-03-22T08:59:51.968Z",
+    "end": "2022-03-22T09:00:04.343Z",
+    "duration": 12375,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "574bd05a-c1f7-4956-b562-0913f4d3e257",
+      "title": "",
+      "fullFile": "cypress/integration/Page Loads/PageComparison.spec.js",
+      "file": "cypress/integration/Page Loads/PageComparison.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [
+        {
+          "title": "load Home page",
+          "fullTitle": "load Home page",
+          "timedOut": null,
+          "duration": 9119,
+          "state": "failed",
+          "speed": null,
+          "pass": false,
+          "fail": true,
+          "pending": false,
+          "context": null,
+          "code": "const t0 = performance.now();\ncy.visit('https://www.unipro.io/', {\n  timeout: 40000\n});\ncy.wrap(performance.now()).then(t1 => {\n  // this is now a queued command which will \n  // only run after the previous command\n  cy.log(`Page load took ${t1 - t0} milliseconds.`);\n  expect(t1 - t0).to.be.lessThan(3);\n  cy.wait(5000);\n  cy.xpath('/html/body/div[3]/div/div/div/div[3]/div[2]/button').should('be.visible').click();\n  cy.percySnapshot('Homepage');\n});",
+          "err": {
+            "message": "TypeError: cy.percySnapshot is not a function",
+            "estack": "TypeError: cy.percySnapshot is not a function\n    at Context.eval (https://www.unipro.io/__cypress/tests?p=cypress\\integration\\Page%2520Loads\\PageComparison.spec.js:115:8)",
+            "diff": null
+          },
+          "uuid": "edb4fad3-9ed6-4c66-aa12-b1e4545cb890",
+          "parentUUID": "574bd05a-c1f7-4956-b562-0913f4d3e257",
+          "isHook": false,
+          "skipped": false
+        }
+      ],
+      "suites": [],
+      "passes": [],
+      "failures": [
+        "edb4fad3-9ed6-4c66-aa12-b1e4545cb890"
+      ],
+      "pending": [],
+      "skipped": [],
+      "duration": 9119,
+      "root": true,
+      "rootEmpty": false,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.2"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/results",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.1.1"
+    }
+  }
+}
