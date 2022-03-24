@@ -194,3 +194,15 @@ cy.log(`Page load took ${t1 - t0} milliseconds.`);
 expect(t1 - t0).to.be.lessThan(3);
 })
 })
+
+//https://www.unipro.io/services
+it('load services page',() => {
+    const t0 = performance.now()
+    cy.viewport(1920, 1080)
+    cy.visit('https://www.unipro.io/services', {timeout: 40000});
+    cy.wrap(performance.now()).then(t1 => {   // this is now a queued command which will 
+        // only run after the previous command
+cy.log(`Page load took ${t1 - t0} milliseconds.`);
+expect(t1 - t0).to.be.lessThan(3);
+})
+})

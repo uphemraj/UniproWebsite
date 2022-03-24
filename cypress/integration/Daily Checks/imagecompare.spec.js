@@ -94,7 +94,10 @@ describe('Visuals', () => {
     })
 
 
-
+    it('Services page compare', () => {
+      cy.visit('https://www.unipro.io/services')
+      cy.compareSnapshot('services-page')
+    })
 
 
 
