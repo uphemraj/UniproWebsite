@@ -101,5 +101,11 @@ describe('Lighthouse', () => {
       });
 
 
+      it('Performance audits for services page', () => {
+        cy.visit('https://www.unipro.io/services');
+        cy.lighthouse();
+      });
+
+
 
   });
