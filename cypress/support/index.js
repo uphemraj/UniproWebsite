@@ -26,3 +26,5 @@ require('cypress-xpath')
 after(() => {
     cy.task('generateReport')
   })
+
+  import 'cypress-axe'
