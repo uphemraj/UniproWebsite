@@ -1,4 +1,5 @@
-# Unipro Website checks test scripts on Visual Studio Code using Cypress
+# Unipro Website checks.
+# Test scripts on Visual Studio Code using Cypress
 # 
 # Daily Checks:
   imagecompare.spec.js
