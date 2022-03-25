@@ -51,7 +51,7 @@ describe('Contact Form', () => {
      //verify that a Thank you message appears on successful submission
       cy.get('h2').contains('Thank You!')
 
-    
+     cy.screenshot('thank you')
 
     })
 
