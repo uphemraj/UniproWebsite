@@ -19,12 +19,16 @@ import './commands'
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
 // cypress/support/index.js
-require('./commands')
+require('./commands');
 
-require('cypress-xpath')
+require('cypress-xpath');
 
+/*
 after(() => {
     cy.task('generateReport')
   })
+  */
 
-  import 'cypress-axe'
+  import 'cypress-axe';
+
+  import 'cypress-mochawesome-reporter/register';

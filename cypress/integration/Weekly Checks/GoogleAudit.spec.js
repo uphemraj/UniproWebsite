@@ -1,3 +1,7 @@
+Cypress.on('uncaught:exception', (err, runnable) => {
+  return false;
+});
+
 describe('Lighthouse', () => {
     it('Performance audits for Homepage', () => {
       cy.visit('https://www.unipro.io/');
