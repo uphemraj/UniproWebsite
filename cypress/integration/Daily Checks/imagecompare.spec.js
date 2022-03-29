@@ -2,6 +2,11 @@ Cypress.on('uncaught:exception', (err, runnable) => {
   return false;
 });
 
+beforeEach(() => {
+  cy.clearLocalStorage()
+  cy.clearCookies()
+})
+
 describe('Visuals', () => {
     it('Homepage compare', () => {
       cy.visit('https://www.unipro.io')
@@ -10,6 +15,7 @@ describe('Visuals', () => {
         capture: 'fullPage',
         errorThreshold: 0.1
       });
+
     })
 
     
@@ -165,11 +171,6 @@ describe('Visuals', () => {
         errorThreshold: 0.1
       });
     })
-
-
-
-
-
 
 
 

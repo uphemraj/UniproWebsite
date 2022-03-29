@@ -32,3 +32,5 @@ after(() => {
   import 'cypress-axe';
 
   import 'cypress-mochawesome-reporter/register';
+
+  import '@percy/cypress';
