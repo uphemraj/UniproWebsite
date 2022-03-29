@@ -1,3 +1,7 @@
+Cypress.on('uncaught:exception', (err, runnable) => {
+  return false;
+});
+
 describe('Contact Form', () => {
     it('Test the contact form', () => {
       cy.visit('https://www.unipro.io/contact/');

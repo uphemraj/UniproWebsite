@@ -2,11 +2,17 @@
   "projectId": "qs4zgm",
   "viewportWidth": 1920,
   "viewportHeight": 1080,
-  "reporter": "mochawesome",
+  "defaultCommandTimeout": 10000,
+  "reporter": "cypress-mochawesome-reporter",
   "reporterOptions": {
-     "reportDir": "cypress/results",
-     "overwrite": false,
-     "html": false,
-     "json": true
-  }
+    "reportDir": "cypress/reports",
+    "charts": true,
+    "reportPageTitle": "My Test Suite",
+    "embeddedScreenshots": true,
+    "inlineAssets": true,
+      "screenshotsFolder": "./cypress/snapshots/actual",
+      "trashAssetsBeforeRuns": true
+    
+  },
+  "video": false
 }

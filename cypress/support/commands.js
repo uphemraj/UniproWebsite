@@ -25,6 +25,11 @@
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
 import "cypress-audit/commands";
 
+/*
 // cypress/support/commands.js
 const compareSnapshotCommand = require('cypress-image-diff-js/dist/command')
 compareSnapshotCommand()
+*/
+
+const compareSnapshotCommand = require('cypress-visual-regression/dist/command');
+compareSnapshotCommand();
