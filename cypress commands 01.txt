@@ -2,4 +2,7 @@ npx cypress run --browser chrome
 
 npx cypress run --browser firefox
 
-npx cypress open
+=======
+npx cypress run --browser chrome
+
+npx cypress run --browser firefox
